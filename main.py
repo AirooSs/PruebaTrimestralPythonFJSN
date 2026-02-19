@@ -31,7 +31,7 @@ class IncidenciaResponse(IncidenciaCreate):
 def root():
     return {"ok": True, "mensaje": "API de incidencias funcionando. Ve a /docs"}
 
-# Endpoint protegido que obtiene info del token
+# Endpoint protegido que obtiene info del token 
 @app.get("/usuario")
 def me(usuario: str = Depends(get_current_user)):
     return {"usuario": usuario}
